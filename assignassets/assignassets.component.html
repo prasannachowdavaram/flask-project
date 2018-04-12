@@ -1,0 +1,40 @@
+
+ <div id="fullpage">
+
+   <app-taskbar></app-taskbar>
+  <div  class=left>
+   <app-body></app-body>  
+ </div>
+<div class=right>
+   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <fieldset class=center>
+      <div class="form-group">
+        <label>Asset_ID</label>
+        <input type="text"
+               class="form-control" name="asset"  ngModel required #first="ngModel">
+      </div> 
+
+      <div class="form-group">
+        <label>Vendor_ID</label>
+        <input type="text"
+               class="form-control"  ngModel name="vendor">
+      </div>
+      <div class="form-group">
+        <label>Start Date</label>
+                <input type='date' class="form-control">
+                
+        </div>
+        <div class="form-group">
+            <label>End Date</label>
+                <input type='date' class="form-control">
+                   
+        </div>
+
+   <div class="input">
+      <input type="submit" value="Submit" id="add">
+      <a [routerLink]="['/dashboard']" class="btn btn-link">Cancel</a>
+    </div>
+     </fieldset>
+  </form>
+  </div>
+</div>

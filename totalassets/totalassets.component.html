@@ -1,0 +1,14 @@
+ <div id="fullpage">
+
+   <app-taskbar></app-taskbar>
+  <div  class=left>
+   <app-body></app-body>  
+ </div>
+<div class=right>
+  <ul>
+  <li *ngFor="let asset of assets">
+    AssetId: {{asset[0]}}
+
+  </li>
+</ul>
+</div>

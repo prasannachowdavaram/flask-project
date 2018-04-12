@@ -1,0 +1,64 @@
+ <div id="fullpage">
+
+   <app-taskbar></app-taskbar>
+  <div  class=left>
+   <app-body></app-body>  
+ </div>
+<div class=right>
+   <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <fieldset class=center>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control" name="name"  ngModel required #first="ngModel">
+      </div> 
+
+      <div class="form-group">
+        <label>Brand</label>
+        <input type="text"
+               class="form-control"  ngModel name="brand">
+      </div>
+   <div class="form-group">
+      <label>Condition</label>
+      <select class="form-control" name="condition" ngModel>
+        <option value="good">good</option>
+        <option value="underrepair">underrepair</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Vendor Name</label>
+      <select class="form-control" name="vendor_name" ngModel>
+        <option value="FGH">FGH</option>
+
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Asset Type</label>
+      <select class="form-control" name="asset_type_name" ngModel>
+        <option value="FY">FY</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Location </label>
+      <select class="form-control" name="location_name" ngModel>
+        <option value="ABC">ABC</option>
+  <!--       Add list of locations here -->
+      </select>
+    </div>
+
+     <div class="form-group">
+        <label>Cost</label>
+        <input type="text"
+               class="form-control" class="cost" name="cost" ngModel>
+      </div>
+   <div class="input">
+      <input type="submit" value="Submit" id="add">
+      <a [routerLink]="['/dashboard']" class="btn btn-link">Cancel</a>
+    </div>
+     </fieldset>
+  </form>
+  </div>
+</div>
